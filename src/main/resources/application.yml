@@ -2,10 +2,17 @@ server:
   port: 8084
 spring:
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/gym?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
-    username: root
-    password: wjffwj
+    read-test-db:
+      driver-class-name: com.mysql.jdbc.Driver
+      jdbc-url: jdbc:mysql://127.0.0.1:3306/gym?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+      username: root
+      password: wjffwj
+
+    write-test-db:
+      jdbc-url: jdbc:mysql://127.0.0.1:3306/gym1?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+      username: root
+      password: wjffwj
+
   mvc:
     view:
       prefix: /

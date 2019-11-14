@@ -9,7 +9,12 @@
     <select id="getOne" resultMap="BaseResultMap">
         select * from content limit 2
     </select>
+    <!--主库查询数据 -->
     <select id="getById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select * from dept where id=#{id}
+    </select>
+    <!-- 从库查询数据-->
+    <select id="getById1" parameterType="java.lang.Integer" resultMap="BaseResultMap">
         select * from dept where id=#{id}
     </select>
 </mapper>

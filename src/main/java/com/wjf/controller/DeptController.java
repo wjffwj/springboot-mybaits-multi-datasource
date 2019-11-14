@@ -20,8 +20,10 @@ public class DeptController {
     @RequestMapping(value = "/get")
     public String getDeptById() {
         Integer id = 1;
-        Dept dept = deptService.getById(1);
+        Dept dept = deptService.getById(id);
+        Dept dept1 = deptService.getById1(id);
         System.out.println(JSON.toJSONString(dept));
+        System.out.println(JSON.toJSONString(dept1));
         return JSON.toJSONString(dept);
     }
 }
